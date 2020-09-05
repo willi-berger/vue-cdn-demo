@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js - cdn</title>
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://unpkg.com/primitive-ui/dist/css/main.css" />
+</head>
+
+
+
+
+<body>
+
+    <div id="app">
+        <h1>{{message}}</h1>
+        <p>A simple vue.js app based on the 'employess' tutorial</p>
+        <div>
+            <employee-list 
+                v-bind:employees="employees"
+            />
+        </div>
+        
+ 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="app.js" />
+    <script type="text/javascript">
+        function autorun() {
+
+        }
+        if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+        else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+        else window.onload = autorun;
+    </script>
+</body>
+
+</html>
