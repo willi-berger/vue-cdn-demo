@@ -20,9 +20,17 @@
         <h1>{{message}}</h1>
         <p>A simple vue.js app based on the 'employess' tutorial</p>
         <div>
-            <employee-list 
-                v-bind:employees="employees"
-            />
+            <employee-list inline-template
+                v-bind:employees="employees">
+                <table>
+                    <thead>
+                        <tr><td>First name</td><td>Last name</td></tr>
+                    </thead>
+                    <tbody>
+                        <tr is="employee-list-item" v-for="e in employees" :employee="e" :key="e.id">
+                    </tbody>
+                    </table>
+            </employee-list>
         </div>
         
  

@@ -9,20 +9,6 @@ Vue.component('employee-list-item',{
 })
 
 Vue.component('employee-list', {
-    template: `
-        <table>
-        <thead>
-            <tr><td>First name</td><td>Last name</td></tr>
-        </thead>
-        <tbody>
-            <employee-list-item
-                v-for="employee in employees"
-                v-bind:employee="employee"
-                v-bind:key="employee.id">
-            </employee-list-item>
-        </tbody>
-        </table>
-    `,
     props:['employees'],
 })
 
@@ -32,9 +18,9 @@ var app = new Vue({
     data: {
         message:"Hello vue!!",
         employees:[
-            {id: 0, firstName:'Willi', lastName: 'Berger'},
-            {id: 1, firstName:'Willi', lastName: 'Berger'},
-            {id: 2, firstName:'Willi', lastName: 'Berger'},
+            {id: 0, firstName:'Willi', lastName: 'Berger1'},
+            {id: 1, firstName:'Willi', lastName: 'Berger2'},
+            {id: 2, firstName:'Willi', lastName: 'Berger3'},
         ],
     },
 })
